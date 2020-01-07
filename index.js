@@ -8,7 +8,7 @@ function loaded() {
   }
   
   window.ethereum.enable().then(function () {
-    let provider = new ethers.providers.InfuraProvider('homestead', '31e60ecf477d433db905802d04107f90')
+    let provider = new ethers.providers.InfuraProvider('homestead', '5e378f49a3994737940a897b2d95222b')
   
     let requestCount = 0
     let lastRequestTime = new Date()
