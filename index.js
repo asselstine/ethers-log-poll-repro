@@ -12,6 +12,8 @@ function loaded() {
   
     let requestCount = 0
     let lastRequestTime = new Date()
+
+    document.getElementById('request-count').innerHTML = 'Ready...'
     
     provider.on(filter1, (log) => {
       requestCount++
