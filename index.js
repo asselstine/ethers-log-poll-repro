@@ -7,8 +7,8 @@ function loaded() {
     topics: [null]
   }
   
-  window.ethereum.enable().then(function (currentProvider) {
-    let provider = new ethers.providers.Web3Provider(currentProvider || window.ethereum.currentProvider)
+  window.ethereum.enable().then(function () {
+    let provider = new ethers.providers.Web3Provider(window.ethereum)
   
     let requestCount = 0
     let lastRequestTime = new Date()
