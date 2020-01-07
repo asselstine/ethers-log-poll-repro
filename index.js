@@ -8,7 +8,7 @@ function loaded() {
   }
   
   window.ethereum.enable().then(function () {
-    let provider = new ethers.providers.Web3Provider(window.ethereum)
+    let provider = new ethers.providers.InfuraProvider('homestead', '31e60ecf477d433db905802d04107f90')
   
     let requestCount = 0
     let lastRequestTime = new Date()
