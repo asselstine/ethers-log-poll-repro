@@ -20,7 +20,9 @@ function loaded() {
     document.getElementById('request-count').innerHTML = 'Ready...'
     
     provider.on('block', (blockNumber) => {
-      document.getElementById('request-count').innerHTML = `Block number ${blockNumber}`
+      const msg = `Block number ${blockNumber} on ${new Date()}`
+      console.log(msg)
+      document.getElementById('request-count').innerHTML = msg
     })
 
     provider.on(filter1, (log) => {})
