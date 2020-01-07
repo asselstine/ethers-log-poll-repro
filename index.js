@@ -15,6 +15,10 @@ function loaded() {
 
     document.getElementById('request-count').innerHTML = 'Ready...'
     
+    provider.on('block', (blockNumber) => {
+      document.getElementById('request-count').innerHTML = `Block number ${blockNumber}`
+    })
+
     provider.on(filter1, (log) => {
       requestCount++
       const now = new Date()
